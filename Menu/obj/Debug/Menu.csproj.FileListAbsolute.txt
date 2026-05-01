@@ -1,0 +1,11 @@
+c:\users\leipe\documents\visual studio 2013\Projects\Menu\Menu\bin\Debug\Menu.exe.config
+C:\Users\leipe\Documents\Visual Studio 2013\Projects\Menu\Menu\obj\Debug\Menu.csprojResolveAssemblyReference.cache
+C:\Users\leipe\Documents\Visual Studio 2013\Projects\Menu\Menu\obj\Debug\proyecto.menu.resources
+C:\Users\leipe\Documents\Visual Studio 2013\Projects\Menu\Menu\obj\Debug\proyecto.pedidos.resources
+C:\Users\leipe\Documents\Visual Studio 2013\Projects\Menu\Menu\obj\Debug\proyecto.Properties.Resources.resources
+C:\Users\leipe\Documents\Visual Studio 2013\Projects\Menu\Menu\obj\Debug\Menu.csproj.GenerateResource.Cache
+C:\Users\leipe\Documents\Visual Studio 2013\Projects\Menu\Menu\bin\Debug\Menu.exe
+C:\Users\leipe\Documents\Visual Studio 2013\Projects\Menu\Menu\bin\Debug\Menu.pdb
+C:\Users\leipe\Documents\Visual Studio 2013\Projects\Menu\Menu\obj\Debug\Menu.exe
+C:\Users\leipe\Documents\Visual Studio 2013\Projects\Menu\Menu\obj\Debug\Menu.pdb
+C:\Users\leipe\Documents\Visual Studio 2013\Projects\Menu\Menu\obj\Debug\proyecto.Form3.resources
