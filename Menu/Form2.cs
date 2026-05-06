@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace proyecto
 {
@@ -16,7 +17,6 @@ namespace proyecto
         public pedidos()
         {
             InitializeComponent();
-            cargarDatos();
         }
         //carga los pedidos
         public void cargarDatos()
@@ -36,10 +36,12 @@ namespace proyecto
                 estado = estado.Text
             };
             Datos.ListaPedidos.Add(nuevo);
-
             //carga los datos ingresados en la tabla y muestra un mensaje
             limpiarCampos();
+            cargaDatosTxt();
             cargarDatos();
+            //Hacer el archivo de txt
+            pedido.archivoTxt();
             MessageBox.Show("Pedido agregado correctamente");
         }
         //metodo que limpia los campos de texto 
@@ -63,10 +65,39 @@ namespace proyecto
             nuevoForm.Show();
             this.Hide();
         }
+        public void cargaDatosTxt()
+        {
+            //cargar los datos del archivo txt 
+            dataGridView1.Rows.Clear();
+            dataGridView1.Columns.Clear();
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.AllowUserToAddRows = false;
+
+            dataGridView1.Columns.Add("id", "ID");
+            dataGridView1.Columns.Add("fecha", "Fecha");
+            dataGridView1.Columns.Add("cliente", "Cliente");
+            dataGridView1.Columns.Add("productos", "Productos");
+            dataGridView1.Columns.Add("estado", "Estado");
+
+            if (File.Exists("pedidos.txt"))
+            {
+                foreach (string linea in File.ReadAllLines("pedidos.txt"))
+                {
+                    if (string.IsNullOrWhiteSpace(linea)) continue;
+
+                    var datos = linea.Split(',');
+
+                    if (datos.Length == 5)
+                    {
+                        dataGridView1.Rows.Add(datos);
+                    }
+                }
+            }
+        }
 
         private void pedidos_Load(object sender, EventArgs e)
         {
-            cargarDatos();
+            cargaDatosTxt();
         }
     }
 }

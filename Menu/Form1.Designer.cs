@@ -54,7 +54,6 @@
             // 
             this.ventas.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ventas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ventas.Location = new System.Drawing.Point(65, 260);
             this.ventas.Name = "ventas";
             this.ventas.Size = new System.Drawing.Size(422, 65);
@@ -67,7 +66,6 @@
             // 
             this.pedidos.BackColor = System.Drawing.Color.CornflowerBlue;
             this.pedidos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pedidos.Location = new System.Drawing.Point(65, 167);
             this.pedidos.Name = "pedidos";
             this.pedidos.Size = new System.Drawing.Size(422, 65);
@@ -81,7 +79,6 @@
             this.productos.AccessibleName = "productos";
             this.productos.BackColor = System.Drawing.Color.CornflowerBlue;
             this.productos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.productos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.productos.ForeColor = System.Drawing.SystemColors.ControlText;
             this.productos.Location = new System.Drawing.Point(65, 79);
             this.productos.Name = "productos";
