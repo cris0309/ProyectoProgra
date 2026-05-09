@@ -11,9 +11,9 @@ using System.IO;
 
 namespace proyecto
 {
-    public partial class Form3 : Form
+    public partial class verPedidos : Form
     {
-        public Form3()
+        public verPedidos()
         {
             InitializeComponent();
         }
@@ -21,42 +21,58 @@ namespace proyecto
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = Datos.ListaPedidos;
+            dataGridView1.Refresh();
         }
         private void Form3_Load(object sender, EventArgs e)
         {
-            //cargar los datos del archivo txt 
-            dataGridView1.Rows.Clear();
-            dataGridView1.Columns.Clear();
-            dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.AllowUserToAddRows = false;
-
-            dataGridView1.Columns.Add("id", "ID");
-            dataGridView1.Columns.Add("fecha", "Fecha");
-            dataGridView1.Columns.Add("cliente", "Cliente");
-            dataGridView1.Columns.Add("productos", "Productos");
-            dataGridView1.Columns.Add("estado", "Estado");
+            //cargar los datos del archivo txt
 
             if (File.Exists("pedidos.txt"))
             {
+                Datos.ListaPedidos.Clear();
                 foreach (string linea in File.ReadAllLines("pedidos.txt"))
                 {
                     if (string.IsNullOrWhiteSpace(linea)) continue;
 
-                    var datos = linea.Split(',');
+                    string[] datos = linea.Split(',');
 
                     if (datos.Length == 5)
                     {
-                        dataGridView1.Rows.Add(datos);
+                        pedido nuevo = new pedido()
+                        {
+                            id = int.Parse(datos[0]),
+                            fecha = DateTime.Parse(datos[1]),
+                            cliente = datos[2],
+                            productos = datos[3],
+                            estado = datos[4]
+                        };
+
+                        Datos.ListaPedidos.Add(nuevo);
                     }
                 }
             }
+            cargarDatos();
         }
 
         private void verPedidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form3 nuevoForm = new Form3();
+            verPedidos nuevoForm = new verPedidos();
             nuevoForm.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void menúToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            menu nuevoForm = new menu();
+            nuevoForm.Show();
+            this.Close();
+        }
+
+        private void almacenarPedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pedidos nuevoForm = new pedidos();
+            nuevoForm.Show();
+            this.Close();
         }
 
     }

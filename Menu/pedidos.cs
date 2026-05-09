@@ -19,11 +19,14 @@ namespace proyecto
         //creamos un  metódo que guarde los pedidos en un archivo de txt
         public static void archivoTxt()
         {
-            foreach (var e in Datos.ListaPedidos)
+            StreamWriter sw = new StreamWriter("pedidos.txt");
+
+            foreach (pedido e in Datos.ListaPedidos)
             {
-                string linea = e.id + " , " + e.fecha + " , " + e.cliente + " , " + e.productos + " , " + e.estado;
-                File.AppendAllText("pedidos.txt", linea + Environment.NewLine);
+                sw.WriteLine(e.id + "," + e.fecha.ToString("yyyy-MM-dd") + "," + e.cliente + "," + e.productos + "," + e.estado);
             }
+
+            sw.Close();
         }
     }
 }

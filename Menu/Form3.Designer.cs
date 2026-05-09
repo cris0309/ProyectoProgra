@@ -1,6 +1,6 @@
 ﻿namespace proyecto
 {
-    partial class Form3
+    partial class verPedidos
     {
         /// <summary>
         /// Required designer variable.
@@ -80,6 +80,7 @@
             this.menúToolStripMenuItem.Name = "menúToolStripMenuItem";
             this.menúToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
             this.menúToolStripMenuItem.Text = "Menú";
+            this.menúToolStripMenuItem.Click += new System.EventHandler(this.menúToolStripMenuItem_Click);
             // 
             // registrarProductosToolStripMenuItem
             // 
@@ -94,6 +95,7 @@
             this.almacenarPedidosToolStripMenuItem.Name = "almacenarPedidosToolStripMenuItem";
             this.almacenarPedidosToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
             this.almacenarPedidosToolStripMenuItem.Text = "Almacenar pedidos";
+            this.almacenarPedidosToolStripMenuItem.Click += new System.EventHandler(this.almacenarPedidosToolStripMenuItem_Click);
             // 
             // verPedidosToolStripMenuItem
             // 
@@ -118,7 +120,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(658, 267);
             this.dataGridView1.TabIndex = 10;
             // 
-            // Form3
+            // verPedidos
             // 
             this.AccessibleName = "verPedidos";
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -129,7 +131,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.menuPedidos);
-            this.Name = "Form3";
+            this.Name = "verPedidos";
             this.Text = "Pedidos";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.menuPedidos.ResumeLayout(false);

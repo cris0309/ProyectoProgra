@@ -31,7 +31,6 @@ namespace proyecto
 
         private void ventas_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
