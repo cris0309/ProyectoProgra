@@ -1,4 +1,4 @@
-﻿namespace proyecto
+﻿namespace Proyecto
 {
     partial class menu
     {

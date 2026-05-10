@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace proyecto
+namespace Proyecto
 {
     //clase de pedidos
     public class pedido

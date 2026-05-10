@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace proyecto
+namespace Proyecto
 {
     public partial class menu : Form
     {

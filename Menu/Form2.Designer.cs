@@ -1,4 +1,4 @@
-﻿namespace proyecto
+﻿namespace Proyecto
 {
     partial class pedidos
     {
@@ -49,6 +49,7 @@
             this.tbProductos = new System.Windows.Forms.TextBox();
             this.tbCliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.menuPedidos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +64,7 @@
             this.registroDeVentasToolStripMenuItem});
             this.menuPedidos.Location = new System.Drawing.Point(0, 0);
             this.menuPedidos.Name = "menuPedidos";
-            this.menuPedidos.Size = new System.Drawing.Size(1020, 28);
+            this.menuPedidos.Size = new System.Drawing.Size(1089, 28);
             this.menuPedidos.TabIndex = 0;
             this.menuPedidos.Text = "menuStrip1";
             // 
@@ -106,7 +107,7 @@
             this.listView1.ForeColor = System.Drawing.Color.SeaShell;
             this.listView1.Location = new System.Drawing.Point(12, 41);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(996, 400);
+            this.listView1.Size = new System.Drawing.Size(1065, 565);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -114,7 +115,7 @@
             // 
             this.bAgregar.BackColor = System.Drawing.Color.PaleGreen;
             this.bAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bAgregar.Location = new System.Drawing.Point(44, 358);
+            this.bAgregar.Location = new System.Drawing.Point(41, 544);
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(104, 34);
             this.bAgregar.TabIndex = 2;
@@ -126,7 +127,7 @@
             // 
             this.bCancelar.BackColor = System.Drawing.Color.LightCoral;
             this.bCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bCancelar.Location = new System.Drawing.Point(164, 358);
+            this.bCancelar.Location = new System.Drawing.Point(161, 544);
             this.bCancelar.Name = "bCancelar";
             this.bCancelar.Size = new System.Drawing.Size(104, 34);
             this.bCancelar.TabIndex = 3;
@@ -173,7 +174,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(32, 204);
+            this.textBox4.Location = new System.Drawing.Point(32, 235);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(127, 22);
             this.textBox4.TabIndex = 10;
@@ -181,7 +182,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(32, 241);
+            this.textBox5.Location = new System.Drawing.Point(32, 439);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(127, 22);
             this.textBox5.TabIndex = 11;
@@ -193,7 +194,7 @@
             this.estado.Items.AddRange(new object[] {
             "Pendiente",
             "Entregado"});
-            this.estado.Location = new System.Drawing.Point(199, 239);
+            this.estado.Location = new System.Drawing.Point(199, 437);
             this.estado.Name = "estado";
             this.estado.Size = new System.Drawing.Size(204, 24);
             this.estado.TabIndex = 12;
@@ -213,7 +214,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(564, 124);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(417, 285);
+            this.dataGridView1.Size = new System.Drawing.Size(475, 291);
             this.dataGridView1.TabIndex = 14;
             // 
             // tbProductos
@@ -241,12 +242,22 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "Lista de pedidos";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(199, 235);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(204, 180);
+            this.listBox1.TabIndex = 18;
+            // 
             // pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(1020, 446);
+            this.ClientSize = new System.Drawing.Size(1089, 618);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbCliente);
             this.Controls.Add(this.tbProductos);
@@ -298,5 +309,6 @@
         private System.Windows.Forms.TextBox tbProductos;
         private System.Windows.Forms.TextBox tbCliente;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
